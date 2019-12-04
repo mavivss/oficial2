@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Início{% endblock title %}
+	 
+{% block content %}
+
+	<img id="imagemhome" src="{{url_for('static', filename='imagens/capa3.png')}}"/><br>
+
+    <aside>
+    	<div id="texto2">	
+	Em nosso país, convivemos com uma grande dificuldade em se adotar crianças, dessa forma, 
+	elas passam um bom tempo de suas vidas em abrigos, que nem sempre oferecem a melhor qualidade 
+	de vida possível, já que dependem de doações. Nós não podemos acabar com esse contexto, mas 
+	podemos melhorá-lo, por este motivo, temos a possibilidade de doar roupas, brinquedos, alimentos, 
+	para aquelas crianças que precisam. Além disso, podemos também nos voluntariar a levar alegria a 
+	essas crianças, visitando-as periodicamente em seus abrigos e fazendo brincadeiras e atividades 
+	criativas. Lembre-se: você pode tornar a vida de uma dessas crianças melhor com atitudes muito simples.
+		</div>
+	</aside>	 
+	
+	<img id="cont" align="center" src="{{url_for('static', filename='imagens/imagem.png')}}"/>
+
+<br/><br/><br/><br/><br/><br/>	
+{% endblock content %}

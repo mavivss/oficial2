@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Doações{% endblock title %}
+
+        {% block doacoes %} 
+  </div>
+       <div align="center">
+          <img id="imagemhome" src="{{url_for('static', filename='imagens/capa6.png')}}"/>>	
+     </div>
+       <h4 align="center">Tem algo que não use mais? Doe para quem precisa!</h4><br/><br/>
+   
+ 
+         <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Senha</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Endereço</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Endereço">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Form de doação</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Dinheiro, roupas, brinquedos, alimentos">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Cidade</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Estado</label>
+      <select id="inputState" class="form-control">
+        <option selected>Escolha...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">País</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Concordo com os termos para realizar a doação
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Concluído</button>
+</form>
+ 
+ {% endblock doacoes %}

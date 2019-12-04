@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{% block title %}Cadastre-se{% endblock title %}
+
+{% block content %}
+{% block message %}
+
+{% endblock message %}
+  <img id="imagemhome" src="{{url_for('static', filename='imagens/capa5.png')}}"/>
+  
+</div><br><br>
+
+<div class="col-md-4 col-md-offset-3" style="margin: auto; margin-bottom: 5%; margin-top: 5%;">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+      <div class="alert alert-warning">
+          <ul class=flashes>
+              {% for message in messages %}
+                  <li>{{ message }}</li>
+              {% endfor %}
+          </ul>
+      </div>
+  {% endif %}
+{% endwith %}
+<form method="POST" action="">
+  {{form.hidden_tag()}}
+  <div class="row">
+      <div class="input-field col s12">
+      {{form.usuario.label}}
+      {{form.usuario(class="form-control", placeholder="Seu nome de usuário")}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      {{form.email.label}}
+      {{form.email(class="form-control", placeholder="Seu email")}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      {{form.senha.label}}
+      {{form.senha(class="form-control", placeholder="Sua senha")}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      {{form.repita_senha.label}}
+      {{form.repita_senha(class="form-control", placeholder="Repita senha")}}
+    </div>
+  </div><br>
+    {{form.submit(class="")}}
+    <input type="button" class="" value="Voltar" onClick="history.go(-1)">
+</form>
+</div>
+
+<br><br>
+{% endblock content %}
