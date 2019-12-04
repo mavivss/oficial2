@@ -42,7 +42,8 @@ def load_user(id):
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    users=User.query.all()
+    return render_template('index.html', users=users)
 
 
 @app.route('/doacoes')
@@ -77,8 +78,11 @@ def cadastre():
 def login():
     form = LoginUsuario()
     if form.validate_on_submit():
+        print("entrei aqui")
         user = User.query.filter_by(usuario=form.usuario.data).first()
+        print(user)
         if user and user.senha == form.senha.data:
+            print(user)
             login_user(user)
             flash("Acesso permitido")
             return redirect(url_for("index"))
